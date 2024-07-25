@@ -12,7 +12,7 @@ import seaborn as sns
 device = ("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 
 # Params
-num_epochs = 30
+num_epochs = 5
 batch_size = 100
 learning_rate = 0.001
 train_losses = np.zeros(num_epochs)
