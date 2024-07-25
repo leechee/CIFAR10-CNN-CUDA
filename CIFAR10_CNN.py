@@ -12,7 +12,7 @@ import seaborn as sns
 device = ("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 
 # Params
-num_epochs = 10
+num_epochs = 30
 batch_size = 100
 learning_rate = 0.001
 train_losses = np.zeros(num_epochs)
@@ -131,7 +131,7 @@ def test(model, criterion, test_loader, num_epochs):
             test_losses[epoch] = avg_test_loss
             test_accuracy = 100 * correct / len(test_loader.dataset)
 
-    print(f"Test Loss: {avg_test_loss:.5f}%")
+    print(f"Test Loss: {avg_test_loss:.5f}")
 
     print(f"Test Accuracy: {test_accuracy:.3f}%")
 
